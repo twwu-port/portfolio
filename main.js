@@ -1,4 +1,12 @@
 $(document).ready(function () {
+
+    $('.submit').on('click', function() {
+        window.open("mailto:wu.tszwai@outlook.com"
+         + "?subject=" + escape(document.getElementById('email').value) + "-" + escape(document.getElementById('name').value)
+         + "&body=" + escape(document.getElementById('subject').value))
+        ;
+    });
+
     $('.burger').on('click', function() {
        $('.nav-links').toggleClass('nav-active');
        $('.bar').toggleClass('open');
